@@ -1,3 +1,33 @@
+* {
+    margin: 0;
+}
+
+nav {
+    background: lightgray;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;;
+}
+
+nav h1 {
+    width: 50%;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-right: 60px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
 body {
     overflow: hidden;
 }
@@ -5,11 +35,11 @@ body {
 .split-section {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
 }
 
 .leftside, .rightside {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     overflow-y: scroll;
     padding: 20px;
@@ -37,14 +67,26 @@ iframe {
 .column {
   flex: 20%;
   max-width: 50%;
-  padding: 0 4px;
+  padding: 0 8px;
 }
 
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
+    margin-top: 16px;
+    vertical-align: middle;
+    width: 100%;
 }
+
+/* hover effects */
+.column img {
+    transition: transform .2s;
+}
+
+.column img:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
